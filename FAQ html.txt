@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luigi’s Legal Fund Bookshop FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+        details {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background: #f9f9f9;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        a {
+            color: #0066cc;
+        }
+        .contact {
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1>Luigi’s Legal Fund Bookshop FAQ</h1>
+
+
+    <details open>
+        <summary>What is Luigi’s Legal Fund Bookshop?</summary>
+        <p>Luigi’s Legal Fund Bookshop is an affiliate bookstore operated through Bookshop.org. Each purchase made via this shop generates a 10% commission that is fully directed to support Luigi’s legal defense fund. This provides a transparent and reliable way for supporters to contribute simply by purchasing books they love.</p>
+        <p>This shop serves as a supplemental method of contribution alongside direct donations to the legal fund, which remain the highest priority. When purchasing books or gifts for family and friends, supporters are encouraged to use this shop to help further the fight for justice and a fair trial.</p>
+    </details>
+
+
+    <details>
+        <summary>Why does it exist?</summary>
+        <p>The shop was created to offer a straightforward, trustworthy way to financially support Luigi’s legal fund. By linking book purchases to the fund, supporters can contribute through everyday shopping in addition to direct donations.</p>
+    </details>
+
+
+    <details>
+        <summary>Why use Bookshop.org?</summary>
+        <p>Bookshop.org was chosen because it supports independent bookstores rather than large corporate retailers. Unlike major platforms that prioritize profit above all else, Bookshop.org shares revenue with local bookstores and helps sustain community-based book culture.</p>
+        <p>Using Bookshop.org promotes a fairer distribution of income, resists monopolies, and helps keep independent businesses alive.</p>
+    </details>
+
+
+    <details>
+        <summary>Can I purchase from the bookshop if I’m outside the United States?</summary>
+        <p>At this time, purchases can only be made with a U.S.-based payment method and shipping address. Bookshop.org does not currently support international payment options or shipping.</p>
+    </details>
+
+
+    <details>
+        <summary>Why aren’t ebooks or audiobooks available in the shop?</summary>
+        <p>Bookshop.org only sells physical books through affiliate storefronts. Ebooks and audiobooks are not currently available for purchase on the platform and therefore cannot be included in shop lists or recommendations.</p>
+    </details>
+
+
+    <details>
+        <summary>Why isn’t Luigi involved in the shop or its finances?</summary>
+        <p>Federal regulations prohibit incarcerated individuals from receiving funds or conducting outside business transactions. Specifically:</p>
+        <blockquote>“Funds enclosed in inmate correspondence are to be rejected except as provided for in part 506 of this chapter.” — 28 C.F.R. § 540.23</blockquote>
+        <p>For this reason, neither Luigi nor his team are involved in any way with the operation of the bookshop or the handling of funds. All commissions are managed externally and transparently transferred to the legal fund.</p>
+        <p><a href="#">View the latest financial reports here</a></p>
+    </details>
+
+
+    <details>
+        <summary>How is the money from book purchases split up?</summary>
+        <p>When you buy a book through this shop, the money is divided as follows:</p>
+        <ul>
+            <li>Bookshop.org keeps a portion to cover platform costs, order fulfillment, and operations.</li>
+            <li>Independent bookstores receive a share of every sale to support local shops.</li>
+            <li>This shop earns a 10% commission on every purchase made through its links or lists.</li>
+        </ul>
+        <p>100% of the affiliate commission from this shop is donated directly to Luigi’s legal fund. Financial reports are provided to document all commissions earned and transferred, so supporters can see exactly where the money is going.</p>
+        <p><a href="#">Link to Bookshop.org affiliate policies</a></p>
+        <p><a href="#">View the latest financial reports here</a></p>
+    </details>
+
+
+    <details>
+        <summary>Does Luigi have to pay taxes on earnings from the bookshop?</summary>
+        <p>The shop owner receives a Form 1099 and is personally responsible for any taxes owed to the IRS. When funds are transferred to Luigi’s legal fund, he may or may not have a tax liability; determining this is his responsibility, and it is not disclosed here.</p>
+        <p>What is known is that Luigi is deeply grateful for the financial support.</p>
+        <p><strong>Please note:</strong> This is not tax advice. Anyone with tax questions about gifts, donations, or legal funds should consult a qualified tax professional.</p>
+    </details>
+
+
+    <details>
+        <summary>Why should I feel safe purchasing from here?</summary>
+        <p>This shop uses Bookshop.org, a reputable platform dedicated to supporting independent bookstores. All transactions are processed securely through Bookshop.org, which handles payment and shipping.</p>
+        <p>Additionally, 100% of commissions earned through this shop go directly to Luigi’s legal fund, with full financial reporting available for transparency.</p>
+        <p><a href="#">View the latest financial reports here</a></p>
+    </details>
+
+
+    <details>
+        <summary>How do I know you’re not scamming?</summary>
+        <p>Transparency is a top priority. All affiliate commissions are donated to Luigi’s legal fund, and financial reports documenting the income and donations are regularly published. Bookshop.org handles payments and orders independently, so all sales and commissions are verifiable through their system.</p>
+        <p><a href="#">See detailed financial reports</a></p>
+    </details>
+
+
+    <details>
+        <summary>Privacy and Data Security</summary>
+        <p>All purchases through Luigi’s Legal Fund Bookshop are processed securely by Bookshop.org. No personal or sensitive information about Luigi or supporters is collected, shared, or used beyond what is necessary to complete transactions and comply with legal requirements. Protecting supporter privacy and data security is a top priority.</p>
+    </details>
+
+
+    <details>
+        <summary>Refunds and Customer Support</summary>
+        <p>If you experience any issues with your order or wish to request a refund, please contact Bookshop.org’s customer support directly. For questions specific to Luigi’s Legal Fund Bookshop or financial transparency, reach out at <a href="mailto:yourcontact@example.com">yourcontact@example.com</a>.</p>
+    </details>
+
+
+    <details>
+        <summary>Contact Information</summary>
+        <p>For any inquiries about the bookshop, legal fund donations, financial reports, or other questions, please contact us here: <a href="#">Contact Form</a></p>
+    </details>
+
+
+    <details>
+        <summary>Updates and Changes</summary>
+        <p>Policies, platform features, and regulations may change over time. This FAQ, financial reports, and shop information will be updated regularly to reflect the most current details. Please check back periodically for updates.</p>
+    </details>
+
+
+    <details>
+        <summary>Disclaimers</summary>
+        <p>Luigi’s Legal Fund Bookshop operates as an affiliate of Bookshop.org, an independent third-party platform. All purchases and transactions are subject to Bookshop.org’s terms of service and privacy policies. Luigi’s Legal Fund Bookshop is not responsible for issues related to Bookshop.org’s platform, shipping, or customer service.</p>
+    </details>
+
+
+    <div class="contact">
+        <p>Thank you for your support.</p>
+    </div>
+
+
+</body>
+</html>
