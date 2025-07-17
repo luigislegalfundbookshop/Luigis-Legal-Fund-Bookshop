@@ -11,13 +11,13 @@
         color: #000000;
       }
       .faq {
-        background-color: #feffe9; /* off-white box */
+        background-color: #ffffff; /* white box */
         border: 2px solid #3f704d; /* hunter green border */
         border-radius: 10px;
         padding: 30px;
         max-width: 800px;
         margin: auto;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         color: #000000;
       }
       .faq-header {
@@ -31,13 +31,7 @@
         border-radius: 50%;
         margin-right: 20px;
         object-fit: cover;
-      }
-      .faq-banner {
-        width: 100%;
-        max-width: 2048px;
-        height: auto;
-        border-radius: 10px;
-        margin-bottom: 20px;
+        flex-shrink: 0;
       }
       h2 {
         margin: 0;
@@ -59,18 +53,15 @@
         font-weight: 600;
       }
       a:hover {
-        color: #feffe9;
-        background-color: #3f704d;
-        outline: 2px solid #feffe9;
-        border-radius: 5px;
-        padding: 2px 6px;
+        text-decoration: underline;
       }
       details {
         margin-top: 1em;
         padding: 10px;
         border: 1.5px solid #3f704d;
         border-radius: 8px;
-        background-color: #feffe9;
+        background-color: #ffffff;
+        color: #000000;
       }
       details[open] summary {
         color: #3f704d;
@@ -96,23 +87,10 @@
       details[open] summary::before {
         transform: rotate(90deg);
       }
-      /* Hover effect on details */
-      details:hover {
-        background-color: #3f704d;
-        color: #feffe9;
-        border-color: #feffe9;
-      }
-      details:hover a {
-        color: #feffe9;
-      }
-      details:hover summary {
-        color: #feffe9;
-      }
     </style>
   </head>
   <body>
     <div class="faq">
-      <img src="path/to/banner.jpg" alt="Banner Image" class="faq-banner">
       <div class="faq-header">
         <img src="path/to/pfp.jpg" alt="Profile Picture" class="pfp">
         <h2>Luigi’s Bookshop FAQ and Info</h2>
@@ -153,46 +131,4 @@
         <summary>Finances & Transparency</summary>
         <details>
           <summary>Why isn’t Luigi involved in the shop or its finances?</summary>
-          <p>Federal regulations prohibit incarcerated individuals from receiving funds or conducting outside business transactions. Specifically:</p>
-          <blockquote>“Funds enclosed in inmate correspondence are to be rejected except as provided for in part 506 of this chapter.”<br>— 28 C.F.R. § 540.23</blockquote>
-          <p>For this reason, neither Luigi nor his team are involved in any way with the operation of the bookshop or the handling of funds. All commissions are managed externally and transparently transferred to the legal fund.</p>
-          <p>If you think this is a silly or unfair rule, consider contacting your representatives to urge reform, including ending the death penalty, using this easy link: <a href="https://abolishdpandhelpluigimangione.github.io/" target="_blank" rel="noopener noreferrer">https://abolishdpandhelpluigimangione.github.io/</a></p>
-          <p><a href="INSERT_LINK_TO_FINANCIAL_REPORTS_HERE" target="_blank" rel="noopener noreferrer">View the latest financial reports here</a></p>
-        </details>
-        <details>
-          <summary>How is the money from book purchases split up?</summary>
-          <p>When you buy a book through this shop, the money is divided as follows:</p>
-          <ul>
-            <li>Bookshop.org keeps a portion to cover platform costs, order fulfillment, and operations.</li>
-            <li>Independent bookstores receive a share of every sale to support local shops.</li>
-            <li>This shop earns a 10% commission on every purchase made through its links or lists.</li>
-            <li>100% of the affiliate commission from this shop is donated directly to Luigi’s legal fund. Financial reports are provided to document all commissions earned and transferred, so supporters can see exactly where the money is going.</li>
-            <li>The remaining portions of each sale go to publishers, authors, distributors, and Bookshop.org itself.</li>
-          </ul>
-          <p><a href="INSERT_LINK_TO_BOOKSHOP_AFFILIATE_POLICIES_HERE" target="_blank" rel="noopener noreferrer">Link to Bookshop.org affiliate policies</a></p>
-          <p><a href="INSERT_LINK_TO_FINANCIAL_REPORTS_HERE" target="_blank" rel="noopener noreferrer">View the latest financial reports here</a></p>
-        </details>
-        <details>
-          <summary>Does Luigi have to pay taxes on earnings from the bookshop?</summary>
-          <p>The shop owner receives a Form 1099 and is personally responsible for any taxes owed to the IRS. When funds are transferred to Luigi’s legal fund, he may or may not have a tax liability; determining this is his responsibility, and it is not disclosed here.</p>
-          <p>What is known is that Luigi is deeply grateful for the financial support.</p>
-          <p><strong>Please note:</strong> This is not tax advice. Anyone with tax questions about gifts, donations, or legal funds should consult a qualified tax professional.</p>
-        </details>
-        <details>
-          <summary>Why should I feel safe purchasing from here?</summary>
-          <p>This shop uses Bookshop.org, a reputable platform dedicated to supporting independent bookstores and maintaining transparency. Payment processing is secure, and no personal or financial information is shared with Luigi or his team.</p>
-          <p>Regular financial reports are published to maintain accountability and trust.</p>
-        </details>
-      </details>
-
-      <details>
-        <summary>Contact & Additional Info</summary>
-        <details>
-          <summary>How can I contact the shop owner or ask questions?</summary>
-          <p>For questions or to share feedback, please use the contact form at: <a href="https://linktr.ee/luigislegalfundbookshop" target="_blank" rel="noopener noreferrer">https://linktr.ee/luigislegalfundbookshop</a> or email directly at <a href="mailto:luigislegalfundbookshop@example.com">luigislegalfundbookshop@example.com</a>.</p>
-        </details>
-      </details>
-
-    </div>
-  </body>
-</html>
+          <p>Federal regulations prohibit inc
