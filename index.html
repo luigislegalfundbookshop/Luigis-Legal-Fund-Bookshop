@@ -1,140 +1,229 @@
-<html>
-  <head>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Luigi’s Legal Fund Bookshop FAQ</title>
 
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #3f704d;
-        margin: 0;
-        padding: 20px;
-        color: #ffffff;
-      }
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet" />
 
-      .faq-container {
-        max-width: 800px;
-        margin: auto;
-      }
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
 
-      h1 {
-        text-align: center;
-        color: #ffffff;
-      }
+  body {
+    margin: 0;
+    padding: 30px 15px;
+    background-color: #FEF9F4;
+    font-family: 'Inter', sans-serif;
+    color: #222222;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
 
-      .faq-item {
-        background-color: #ffffff;
-        color: #000000;
-        border: 2px solid #4f8b62;
-        border-radius: 10px;
-        margin-bottom: 10px;
-        overflow: hidden;
-      }
+  .container {
+    max-width: 750px;
+    margin: 0 auto;
+  }
 
-      .faq-question {
-        background-color: #4f8b62;
-        color: #ffffff;
-        cursor: pointer;
-        padding: 15px;
-        font-size: 16px;
-        border: none;
-        width: 100%;
-        text-align: left;
-        outline: none;
-      }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    color: #3F704D;
+    font-weight: 700;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
 
-      .faq-answer {
-        display: none;
-        padding: 15px;
-      }
+  /* FAQ Item */
+  .faq-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(63,112,77,0.15);
+    margin-bottom: 18px;
+    overflow: hidden;
+    border: 1.5px solid #3F704D;
+  }
 
-      a {
-        color: #3f704d;
-        text-decoration: none;
-      }
+  /* Question button */
+  .faq-question {
+    width: 100%;
+    background: #3F704D;
+    border: none;
+    color: white;
+    padding: 18px 25px;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
 
-      a:hover {
-        text-decoration: underline;
-      }
+  .faq-question:hover,
+  .faq-question:focus {
+    background-color: #2f5538;
+    outline: none;
+  }
 
-      @media (max-width: 600px) {
-        .faq-question {
-          font-size: 14px;
-        }
+  /* Plus/minus icon */
+  .faq-question .icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    user-select: none;
+  }
 
-        .faq-answer {
-          font-size: 14px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="faq-container">
-      <h1>Luigi’s Legal Fund Bookshop: FAQ</h1>
+  .faq-question.active .icon {
+    transform: rotate(45deg);
+  }
 
-      <div class="faq-item">
-        <button class="faq-question">How It Works</button>
-        <div class="faq-answer">
-          <p>This is an affiliate storefront on Bookshop.org. Every purchase you make using our links earns a <strong>10% commission</strong> for Luigi’s official legal defense fund on GiveSendGo.</p>
-          <p><a href="https://www.canva.com/design/DAGtctiIWKY/_zv07c47AvQoaDEcbQkriQ/view?utm_content=DAGtctiIWKY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb1237ef60d" target="_blank">View the latest financial reports here</a>.</p>
-          <p>Bookshop.org also supports independent bookstores via their <strong>profit pool</strong>. <a href="https://support.bookshop.org/en/support/solutions/articles/65000169519-how-does-bookshop-org-work-with-independent-bookstores-#:~:text=Modified%20on%20Sun%2C%208%20Oct,Was%20this%20article%20helpful?" target="_blank">Learn more here</a>.</p>
-        </div>
+  /* Answer area */
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 25px;
+    background: #fff;
+    color: #222222;
+    font-size: 1rem;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+
+  .faq-answer.open {
+    padding: 18px 25px 25px;
+  }
+
+  /* Link styling */
+  a {
+    color: #3F704D;
+    text-decoration: none;
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.25s ease;
+  }
+
+  a:hover,
+  a:focus {
+    border-bottom-color: #3F704D;
+    outline: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .faq-question {
+      font-size: 1rem;
+      padding: 15px 20px;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      padding: 0 20px;
+    }
+
+    .faq-answer.open {
+      padding: 15px 20px 20px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Luigi’s Legal Fund Bookshop: FAQ</h1>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        How It Works
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer" aria-hidden="true">
+        <p>This is an affiliate storefront on Bookshop.org. Every purchase you make using our links earns a <strong>10% commission</strong> for Luigi’s official legal defense fund on GiveSendGo.</p>
+        <p>We publish all financial transfers for <strong>full transparency</strong>. <a href="https://www.canva.com/design/DAGtctiIWKY/_zv07c47AvQoaDEcbQkriQ/view?utm_content=DAGtctiIWKY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb1237ef60d" target="_blank" rel="noopener noreferrer">View the latest reports here</a>.</p>
+        <p>Bookshop.org also supports independent bookstores via their <strong>profit pool</strong>. <a href="https://support.bookshop.org/en/support/solutions/articles/65000169519-how-does-bookshop-org-work-with-independent-bookstores" target="_blank" rel="noopener noreferrer">Learn more here</a>.</p>
       </div>
-
-      <div class="faq-item">
-        <button class="faq-question">Do I Have to Buy from Your Book Lists?</button>
-        <div class="faq-answer">
-          <p>No! Any purchase counts as long as you use our affiliate link and see <strong>"Luigi's Legal Fund Bookshop"</strong> at the top of your Bookshop.org page.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">Can You See Who Buys or What They Buy?</button>
-        <div class="faq-answer">
-          <p>We see what titles are purchased but <strong>never who buys them</strong>. Orders and fulfillment are handled entirely by Bookshop.org.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">Where Does the Money Go?</button>
-        <div class="faq-answer">
-          <p>All affiliate commissions are <strong>fully transferred to Luigi’s official fund on GiveSendGo</strong>. No money is kept by the shop owner. <a href="https://www.canva.com/design/DAGtctiIWKY/_zv07c47AvQoaDEcbQkriQ/view?utm_content=DAGtctiIWKY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb1237ef60d" target="_blank">See our reports</a>.</p>
-          <p><em>"Federal law prohibits prisoners from benefiting financially from most business ventures."</em> <a href="https://www.law.cornell.edu/uscode/text/18/1791" target="_blank">(18 U.S.C. § 1791)</a></p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">Why Isn’t Luigi Involved in This Shop?</button>
-        <div class="faq-answer">
-          <p>Because of prison rules, Luigi <strong>cannot legally operate or directly benefit</strong> from any business venture.</p>
-          <p>If you disagree with that, contact your representatives and support efforts to <a href="https://abolishdpandhelpluigimangione.github.io/" target="_blank">end the death penalty</a>.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">Refunds, Orders & Customer Service</button>
-        <div class="faq-answer">
-          <p>We don’t handle orders directly. For issues with purchases, <a href="https://support.bookshop.org/en/support/solutions/articles/65000035202-how-do-i-return-my-order-or-report-a-problem" target="_blank">contact Bookshop.org support</a>.</p>
-          <p>For questions about this shop or Luigi’s fund, scroll to the bottom of our <a href="https://linktr.ee/luigislegalfundbookshop" target="_blank">Linktree</a> and use the <strong>Contact Us form</strong>.</p>
-        </div>
-      </div>
-
     </div>
 
-    <script>
-      const questions = document.querySelectorAll('.faq-question');
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Do I Have to Buy from Your Book Lists?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer" aria-hidden="true">
+        <p>No! Any purchase counts as long as you use our affiliate link and see <strong>"Luigi's Legal Fund Bookshop"</strong> at the top of your Bookshop.org page.</p>
+      </div>
+    </div>
 
-      questions.forEach(button => {
-        button.addEventListener('click', () => {
-          const answer = button.nextElementSibling;
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Can You See Who Buys or What They Buy?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer" aria-hidden="true">
+        <p>We see what titles are purchased but <strong>never who buys them</strong>. Orders and fulfillment are handled entirely by Bookshop.org.</p>
+      </div>
+    </div>
 
-          if (answer.style.display === 'block') {
-            answer.style.display = 'none';
-          } else {
-            document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-            answer.style.display = 'block';
-          }
-        });
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Where Does the Money Go?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer" aria-hidden="true">
+        <p>All affiliate commissions are <strong>fully transferred to Luigi’s official fund on GiveSendGo</strong>. No money is kept by the shop owner. <a href="https://www.canva.com/design/DAGtctiIWKY/_zv07c47AvQoaDEcbQkriQ/view?utm_content=DAGtctiIWKY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb1237ef60d" target="_blank" rel="noopener noreferrer">See our reports</a>.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Why Isn’t Luigi Involved in This Shop?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer" aria-hidden="true">
+        <p>Because of prison rules, Luigi <strong>cannot legally operate or directly benefit</strong> from any business venture.</p>
+        <p>If you disagree with that, contact your representatives and support efforts to <a href="https://abolishdpandhelpluigimangione.github.io/" target="_blank" rel="noopener noreferrer">end the death penalty</a>.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Refunds, Orders & Customer Service
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer" aria-hidden="true">
+        <p>We don’t handle orders directly. For issues with purchases, <a href="https://support.bookshop.org/en/support/solutions/articles/65000035202-how-do-i-return-my-order-or-report-a-problem" target="_blank" rel="noopener noreferrer">contact Bookshop.org support</a>.</p>
+        <p>For questions about this shop or Luigi’s fund, visit our <a href="https://linktr.ee/luigislegalfundbookshop" target="_blank" rel="noopener noreferrer">Linktree</a> and scroll to the bottom to use the <strong>Contact Us form</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // FAQ toggle with accessibility
+  const faqButtons = document.querySelectorAll('.faq-question');
+
+  faqButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      const isOpen = answer.classList.contains('open');
+
+      // Close all answers
+      document.querySelectorAll('.faq-answer.open').forEach(openAnswer => {
+        openAnswer.classList.remove('open');
+        openAnswer.style.maxHeight = null;
+        openAnswer.previousElementSibling.setAttribute('aria-expanded', 'false');
+        openAnswer.previousElementSibling.classList.remove('active');
+        openAnswer.setAttribute('aria-hidden', 'true');
       });
-    </script>
-  </body>
-</html>
+
+      if (!isOpen) {
+        answer.classList.add('open');
+        answer.style.maxHeight =
