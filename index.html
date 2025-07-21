@@ -4,135 +4,130 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Luigi’s Legal Fund Bookshop FAQ</title>
-
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet" />
-
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
 <style>
-  /* Reset & base */
-  * {
-    box-sizing: border-box;
-  }
-
   body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #1e352a; /* dark hunter green */
+    color: #fff;
     margin: 0;
-    padding: 30px 15px;
-    background-color: #FEF9F4;
-    font-family: 'Inter', sans-serif;
-    color: #222222;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
   }
 
   .container {
-    max-width: 750px;
-    margin: 0 auto;
+    max-width: 720px;
+    width: 100%;
   }
 
   h1 {
-    font-family: 'Playfair Display', serif;
-    color: #3F704D;
-    font-weight: 700;
-    font-size: 2.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 2rem;
   }
 
-  /* FAQ Item */
   .faq-item {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(63,112,77,0.15);
-    margin-bottom: 18px;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
     overflow: hidden;
-    border: 1.5px solid #3F704D;
   }
 
-  /* Question button */
   .faq-question {
-    width: 100%;
-    background: #3F704D;
-    border: none;
-    color: white;
-    padding: 18px 25px;
-    text-align: left;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.15rem;
-    font-weight: 700;
+    background-color: #2f5c3d; /* slightly lighter hunter green */
+    color: #fff;
+    font-weight: 600;
     cursor: pointer;
+    padding: 1rem 1.5rem;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    user-select: none;
+    align-items: center;
     transition: background-color 0.3s ease;
-  }
-
-  .faq-question:hover,
-  .faq-question:focus {
-    background-color: #2f5538;
-    outline: none;
-  }
-
-  /* Plus/minus icon */
-  .faq-question .icon {
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
     user-select: none;
+  }
+
+  .faq-question:hover {
+    background-color: #3f704d;
+  }
+
+  .faq-question.active {
+    background-color: #3f704d;
+  }
+
+  .faq-question:focus {
+    outline: 2px solid #3f704d;
+    outline-offset: 2px;
+  }
+
+  .faq-question .icon {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
   }
 
   .faq-question.active .icon {
     transform: rotate(45deg);
   }
 
-  /* Answer area */
   .faq-answer {
     max-height: 0;
     overflow: hidden;
-    padding: 0 25px;
-    background: #fff;
-    color: #222222;
-    font-size: 1rem;
-    transition: max-height 0.35s ease, padding 0.35s ease;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 1.5rem;
   }
 
   .faq-answer.open {
-    padding: 18px 25px 25px;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
   }
 
-  /* Link styling */
+  .faq-answer p {
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+    color: #222;
+  }
+
   a {
-    color: #3F704D;
+    color: #2f5c3d;
     text-decoration: none;
-    border-bottom: 1.5px solid transparent;
-    transition: border-color 0.25s ease;
+    font-weight: 600;
   }
 
-  a:hover,
-  a:focus {
-    border-bottom-color: #3F704D;
-    outline: none;
+  a:hover {
+    text-decoration: underline;
   }
 
-  /* Responsive */
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
+    body {
+      padding: 1rem;
+    }
+
     h1 {
       font-size: 2rem;
-      margin-bottom: 30px;
+      margin-bottom: 1.5rem;
     }
 
     .faq-question {
       font-size: 1rem;
-      padding: 15px 20px;
+      padding: 0.75rem 1rem;
     }
 
     .faq-answer {
-      font-size: 0.95rem;
-      padding: 0 20px;
+      padding: 0 1rem;
     }
 
     .faq-answer.open {
-      padding: 15px 20px 20px;
+      padding: 0.75rem 1rem 1rem 1rem;
     }
   }
 </style>
@@ -149,7 +144,7 @@
       <div class="faq-answer" aria-hidden="true">
         <p>This is an affiliate storefront on Bookshop.org. Every purchase you make using our links earns a <strong>10% commission</strong> for Luigi’s official legal defense fund on GiveSendGo.</p>
         <p>We publish all financial transfers for <strong>full transparency</strong>. <a href="https://www.canva.com/design/DAGtctiIWKY/_zv07c47AvQoaDEcbQkriQ/view?utm_content=DAGtctiIWKY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb1237ef60d" target="_blank" rel="noopener noreferrer">View the latest reports here</a>.</p>
-        <p>Bookshop.org also supports independent bookstores via their <strong>profit pool</strong>. <a href="https://support.bookshop.org/en/support/solutions/articles/65000169519-how-does-bookshop-org-work-with-independent-bookstores" target="_blank" rel="noopener noreferrer">Learn more here</a>.</p>
+        <p>Bookshop.org also supports independent bookstores via their <strong>profit pool</strong>. <a href="https://support.bookshop.org/en/support/solutions/articles/65000169519-how-does-bookshop-org-work-with-independent-bookstores-#:~:text=Modified%20on%20Sun%2C%208%20Oct,Was%20this%20article%20helpful?" target="_blank" rel="noopener noreferrer">Learn more here</a>.</p>
       </div>
     </div>
 
@@ -196,7 +191,7 @@
 
     <div class="faq-item">
       <button class="faq-question" aria-expanded="false">
-        Refunds, Orders & Customer Service
+        Refunds, Orders &amp; Customer Service
         <span class="icon">+</span>
       </button>
       <div class="faq-answer" aria-hidden="true">
@@ -204,10 +199,10 @@
         <p>For questions about this shop or Luigi’s fund, visit our <a href="https://linktr.ee/luigislegalfundbookshop" target="_blank" rel="noopener noreferrer">Linktree</a> and scroll to the bottom to use the <strong>Contact Us form</strong>.</p>
       </div>
     </div>
+
   </div>
 
 <script>
-  // FAQ toggle with accessibility
   const faqButtons = document.querySelectorAll('.faq-question');
 
   faqButtons.forEach(button => {
@@ -215,7 +210,7 @@
       const answer = button.nextElementSibling;
       const isOpen = answer.classList.contains('open');
 
-      // Close all answers
+      // Close all open answers
       document.querySelectorAll('.faq-answer.open').forEach(openAnswer => {
         openAnswer.classList.remove('open');
         openAnswer.style.maxHeight = null;
@@ -226,4 +221,13 @@
 
       if (!isOpen) {
         answer.classList.add('open');
-        answer.style.maxHeight =
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        button.setAttribute('aria-expanded', 'true');
+        button.classList.add('active');
+        answer.setAttribute('aria-hidden', 'false');
+      }
+    });
+  });
+</script>
+</body>
+</html>
