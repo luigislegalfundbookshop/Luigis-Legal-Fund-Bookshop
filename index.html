@@ -1,6 +1,5 @@
-*<html>
+<html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
@@ -11,130 +10,116 @@
         padding: 20px;
         color: #ffffff;
       }
-      .faq {
-        background-color: #ffffff;
-        border: 2px solid #4f8b62;
-        border-radius: 12px;
-        padding: 25px;
+
+      .faq-container {
         max-width: 800px;
-        margin: 20px auto;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        color: #000000;
+        margin: auto;
       }
-      .faq h2 {
-        color: #ffffff;
+
+      h1 {
         text-align: center;
-        margin-bottom: 20px;
+        color: #ffffff;
       }
-      .faq h3 {
-        font-size: 1.4em;
-        border-bottom: 2px solid #4f8b62;
-        padding-bottom: 5px;
-        margin-top: 30px;
-      }
-      .faq h4 {
-        font-size: 1.2em;
-        border-bottom: 1px solid #4f8b62;
-        padding-bottom: 4px;
-        margin-top: 20px;
-      }
-      .faq p, .faq li {
-        font-size: 1em;
-        line-height: 1.6;
+
+      .faq-item {
+        background-color: #ffffff;
         color: #000000;
+        border: 2px solid #4f8b62;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        overflow: hidden;
       }
-      .faq ul {
-        padding-left: 20px;
+
+      .faq-question {
+        background-color: #4f8b62;
+        color: #ffffff;
+        cursor: pointer;
+        padding: 15px;
+        font-size: 16px;
+        border: none;
+        width: 100%;
+        text-align: left;
+        outline: none;
       }
-      .faq a {
+
+      .faq-answer {
+        display: none;
+        padding: 15px;
+      }
+
+      a {
         color: #3f704d;
         text-decoration: none;
-        font-weight: bold;
       }
-      .faq a:hover {
+
+      a:hover {
         text-decoration: underline;
       }
 
       @media (max-width: 600px) {
-        .faq {
-          padding: 20px;
-          margin: 10px;
+        .faq-question {
+          font-size: 14px;
         }
-        .faq h2 {
-          font-size: 1.5em;
-        }
-        .faq h3 {
-          font-size: 1.2em;
-        }
-        .faq h4 {
-          font-size: 1.05em;
-        }
-        .faq p, .faq li {
-          font-size: 0.95em;
+
+        .faq-answer {
+          font-size: 14px;
         }
       }
     </style>
   </head>
   <body>
-    <div class="faq">
-      <h2>Luigi’s Bookshop FAQ and Info</h2>
+    <div class="faq-container">
+      <h1>Luigi’s Bookshop FAQ and Info</h1>
 
-      <h3>About Luigi’s Legal Fund Bookshop</h3>
+      <div class="faq-item">
+        <button class="faq-question">About the Bookshop</button>
+        <div class="faq-answer">
+          <p>The Bookshop is an affiliate storefront on Bookshop.org. We earn a <strong>10% affiliate commission</strong> on purchases made through our links. That commission is paid to the shop founder’s bank account, then <strong>fully transferred to the official <a href="https://www.givesendgo.com/luigimangione" target="_blank">GiveSendGo legal defense fund</a></strong>.</p>
+          <p>Additionally, Bookshop.org shares part of its profits with independent bookstores via their <strong>profit pool</strong>. <a href="https://support.bookshop.org/en/support/solutions/articles/65000169519-how-does-bookshop-org-work-with-independent-bookstores-#:~:text=Modified%20on%20Sun%2C%208%20Oct,Was%20this%20article%20helpful?" target="_blank">Learn more here</a>.</p>
+        </div>
+      </div>
 
-      <h4>What is Luigi’s Legal Fund Bookshop?</h4>
-      <p>Luigi’s Legal Fund Bookshop is an affiliate bookstore operated through Bookshop.org. Each purchase made via this shop generates a 10% commission that is fully directed to support Luigi’s legal defense fund.</p>
+      <div class="faq-item">
+        <button class="faq-question">Purchases & Donations</button>
+        <div class="faq-answer">
+          <p><strong>Does my purchase have to be on your book lists?</strong> No. As long as you use the affiliate link and see <strong>"Luigi's Legal Fund Bookshop"</strong> at the top of your Bookshop.org screen, your purchase counts toward the 10% commission.</p>
+          <p><strong>Can the shop founder see who is buying?</strong> No. We can see what items are purchased, but <strong>never who buys them</strong>. All fulfillment is handled by Bookshop.org.</p>
+        </div>
+      </div>
 
-      <h4>Why does it exist?</h4>
-      <p>It's a transparent, trustworthy way to financially support Luigi’s legal fund through book purchases, in addition to direct donations.</p>
+      <div class="faq-item">
+        <button class="faq-question">Transparency & Privacy</button>
+        <div class="faq-answer">
+          <p>All affiliate commissions are publicly tracked and transferred to Luigi’s official fund. For financial transparency, view our latest financial reports here: <a href="https://www.canva.com/design/DAGtctiIWKY/_zv07c47AvQoaDEcbQkriQ/view?utm_content=DAGtctiIWKY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb1237ef60d" target="_blank">View Financial Reports</a>.</p>
+          <p><strong>Why isn't Luigi involved in the shop or its finances?</strong> Because of prison rules, Luigi cannot legally participate in or benefit directly from any business venture. If you think that’s unjust, consider contacting your representatives and supporting efforts to <a href="https://abolishdpandhelpluigimangione.github.io/" target="_blank">end the death penalty</a>.</p>
+        </div>
+      </div>
 
-      <h4>Why use Bookshop.org?</h4>
-      <p>Bookshop.org supports independent bookstores rather than major online retailers, sustaining community-based book culture and promoting fairer income distribution.</p>
+      <div class="faq-item">
+        <button class="faq-question">Refunds and Customer Support</button>
+        <div class="faq-answer">
+          <p>For issues with your order, refunds, or shipping, contact Bookshop.org directly: <a href="https://support.bookshop.org/en/support/solutions/articles/65000035202-how-do-i-return-my-order-or-report-a-problem" target="_blank">Request a Refund or Report a Problem</a>.</p>
+          <p>For questions about this shop or fund, <a href="https://linktr.ee/luigislegalfundbookshop" target="_blank">contact us here</a>.</p>
+        </div>
+      </div>
 
-      <h3>Purchasing & Payment</h3>
-
-      <h4>Can I purchase from the bookshop if I’m outside the United States?</h4>
-      <p>Currently, purchases require a U.S.-based payment method and shipping address. Bookshop.org does not yet support international payments or shipping.</p>
-
-      <h4>Why aren’t ebooks or audiobooks available?</h4>
-      <p>Bookshop.org affiliate shops only offer physical books at this time. If this changes, we’ll update the shop information.</p>
-
-      <h3>Finances & Transparency</h3>
-
-      <h4>Why isn’t Luigi involved in the shop or its finances?</h4>
-      <p>Federal regulations prohibit incarcerated individuals from receiving funds or conducting business. For example:</p>
-      <blockquote>“Funds enclosed in inmate correspondence are to be rejected except as provided for in part 506 of this chapter.” — 28 C.F.R. § 540.23</blockquote>
-      <p>Therefore, Luigi is not involved in any operations or funds management for the shop.</p>
-      <p>If you think this is a silly rule, contact your representatives about it and help end the death penalty here: <a href="https://abolishdpandhelpluigimangione.github.io/">End the Death Penalty</a></p>
-
-      <h4>How is the money split?</h4>
-      <p>Each book purchase divides revenue among:</p>
-      <ul>
-        <li>Bookshop.org for platform and fulfillment costs</li>
-        <li>Independent bookstores</li>
-        <li>10% commission to Luigi’s legal fund</li>
-      </ul>
-
-      <p><a href="https://www.canva.com/design/DAGtctiIWKY/_zv07c47AvQoaDEcbQkriQ/view?utm_content=DAGtctiIWKY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb1237ef60d">View Financial Reports</a></p>
-
-      <h4>Does Luigi pay taxes on this income?</h4>
-      <p>The shop owner receives a Form 1099 and is personally responsible for any taxes. Luigi is responsible for determining any tax liabilities on the legal fund’s end. This is not tax advice.</p>
-
-      <h4>Is this shop safe and legit?</h4>
-      <p>All purchases are processed by Bookshop.org, a secure and reputable platform. Full transparency is maintained through published financial reports.</p>
-
-      <h3>Contact & Support</h3>
-
-      <h4>Privacy and Data Security</h4>
-      <p>We don't collect supporter data. Purchases are handled securely by Bookshop.org.</p>
-
-      <h4>Refunds and Customer Support</h4>
-      <p>Contact Bookshop.org directly for order issues or refunds. For questions about the shop or fund, reach out at [insert contact email].</p>
-
-      <h4>Stay Updated</h4>
-      <p>This FAQ and reports are updated regularly. Check back for the latest info.</p>
-
-      <h4>Disclaimers</h4>
-      <p>We operate as an affiliate of Bookshop.org. All purchases are subject to their terms of service and policies.</p>
     </div>
+
+    <script>
+      const questions = document.querySelectorAll('.faq-question');
+
+      questions.forEach(button => {
+        button.addEventListener('click', () => {
+          const answer = button.nextElementSibling;
+
+          if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+          } else {
+            document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+            answer.style.display = 'block';
+          }
+        });
+      });
+    </script>
   </body>
 </html>
