@@ -3,17 +3,24 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Luigi’s Legal Fund Bookshop FAQ</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
+<title>Luigi’s Legal Fund Bookshop: FAQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet" />
 <style>
+  /* Reset & base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #1e352a; /* dark hunter green */
-    color: #fff;
     margin: 0;
-    padding: 2rem 1rem;
+    background: #f9fafb;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #222;
+    line-height: 1.6;
     display: flex;
     justify-content: center;
+    padding: 3rem 1rem;
   }
 
   .container {
@@ -22,69 +29,99 @@
   }
 
   h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 2.5rem;
+    font-weight: 700;
+    font-size: 2.75rem;
+    margin-bottom: 2.5rem;
+    color: #111;
     text-align: center;
-    color: #ffffff;
-    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
   }
 
   .faq-item {
-    background: #ffffff;
-    color: #000000;
+    background: #fff;
     border-radius: 8px;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.08);
+    margin-bottom: 1.25rem;
     overflow: hidden;
+    border: 1px solid #e2e8f0;
   }
 
   .faq-question {
-    background-color: #2f5c3d; /* slightly lighter hunter green */
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 1rem 1.5rem;
-    border: none;
-    width: 100%;
-    text-align: left;
-    font-size: 1.1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.3s ease;
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #111;
+    background: transparent;
+    border: none;
+    cursor: pointer;
     user-select: none;
+    transition: background-color 0.3s ease;
   }
 
-  .faq-question:hover {
-    background-color: #3f704d;
+  .faq-question:hover,
+  .faq-question:focus {
+    background-color: #f0f4f8;
+    outline: none;
   }
 
   .faq-question.active {
-    background-color: #3f704d;
+    background-color: #e6f1ff;
+    color: #0b61ff;
   }
 
-  .faq-question:focus {
-    outline: 2px solid #3f704d;
-    outline-offset: 2px;
+  .icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
   }
 
-  .faq-question .icon {
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 1;
+  /* Plus sign as two lines */
+  .icon::before,
+  .icon::after {
+    content: '';
+    position: absolute;
+    background-color: currentColor;
+    border-radius: 1px;
     transition: transform 0.3s ease;
   }
 
-  .faq-question.active .icon {
-    transform: rotate(45deg);
+  .icon::before {
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    transform: translateY(-50%);
+  }
+
+  .icon::after {
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    transform: translateX(-50%);
+  }
+
+  /* Rotate to X when active */
+  .faq-question.active .icon::after {
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .faq-question.active .icon::before {
+    transform: translateY(-50%) rotate(45deg);
   }
 
   .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.4s ease;
     padding: 0 1.5rem;
+    color: #444;
+    font-size: 1rem;
+    transition: max-height 0.4s ease, padding 0.4s ease;
   }
 
   .faq-answer.open {
@@ -92,130 +129,129 @@
   }
 
   .faq-answer p {
-    margin: 0 0 1rem 0;
-    line-height: 1.5;
-    color: #222;
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
 
   a {
-    color: #2f5c3d;
+    color: #0b61ff;
     text-decoration: none;
     font-weight: 600;
+    transition: color 0.2s ease;
   }
 
-  a:hover {
+  a:hover,
+  a:focus {
     text-decoration: underline;
+    color: #004ecb;
   }
 
+  /* Responsive */
   @media (max-width: 600px) {
-    body {
-      padding: 1rem;
-    }
-
     h1 {
       font-size: 2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
     }
 
     .faq-question {
       font-size: 1rem;
-      padding: 0.75rem 1rem;
+      padding: 1rem 1.25rem;
     }
 
     .faq-answer {
-      padding: 0 1rem;
+      padding: 0 1.25rem;
     }
 
     .faq-answer.open {
-      padding: 0.75rem 1rem 1rem 1rem;
+      padding: 0.75rem 1.25rem 1rem 1.25rem;
     }
   }
 </style>
 </head>
 <body>
-  <div class="container">
+  <main class="container" role="main" aria-label="Luigi’s Legal Fund Bookshop FAQ">
     <h1>Luigi’s Legal Fund Bookshop: FAQ</h1>
 
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
+    <section class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq1-button">
         How It Works
-        <span class="icon">+</span>
+        <span class="icon" aria-hidden="true"></span>
       </button>
-      <div class="faq-answer" aria-hidden="true">
+      <div class="faq-answer" id="faq1" role="region" aria-labelledby="faq1-button" aria-hidden="true">
         <p>This is an affiliate storefront on Bookshop.org. Every purchase you make using our links earns a <strong>10% commission</strong> for Luigi’s official legal defense fund on GiveSendGo.</p>
         <p>We publish all financial transfers for <strong>full transparency</strong>. <a href="https://www.canva.com/design/DAGtctiIWKY/_zv07c47AvQoaDEcbQkriQ/view?utm_content=DAGtctiIWKY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb1237ef60d" target="_blank" rel="noopener noreferrer">View the latest reports here</a>.</p>
         <p>Bookshop.org also supports independent bookstores via their <strong>profit pool</strong>. <a href="https://support.bookshop.org/en/support/solutions/articles/65000169519-how-does-bookshop-org-work-with-independent-bookstores-#:~:text=Modified%20on%20Sun%2C%208%20Oct,Was%20this%20article%20helpful?" target="_blank" rel="noopener noreferrer">Learn more here</a>.</p>
       </div>
-    </div>
+    </section>
 
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
+    <section class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq2-button">
         Do I Have to Buy from Your Book Lists?
-        <span class="icon">+</span>
+        <span class="icon" aria-hidden="true"></span>
       </button>
-      <div class="faq-answer" aria-hidden="true">
+      <div class="faq-answer" id="faq2" role="region" aria-labelledby="faq2-button" aria-hidden="true">
         <p>No! Any purchase counts as long as you use our affiliate link and see <strong>"Luigi's Legal Fund Bookshop"</strong> at the top of your Bookshop.org page.</p>
       </div>
-    </div>
+    </section>
 
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
+    <section class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq3-button">
         Can You See Who Buys or What They Buy?
-        <span class="icon">+</span>
+        <span class="icon" aria-hidden="true"></span>
       </button>
-      <div class="faq-answer" aria-hidden="true">
+      <div class="faq-answer" id="faq3" role="region" aria-labelledby="faq3-button" aria-hidden="true">
         <p>We see what titles are purchased but <strong>never who buys them</strong>. Orders and fulfillment are handled entirely by Bookshop.org.</p>
       </div>
-    </div>
+    </section>
 
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
+    <section class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq4" id="faq4-button">
         Where Does the Money Go?
-        <span class="icon">+</span>
+        <span class="icon" aria-hidden="true"></span>
       </button>
-      <div class="faq-answer" aria-hidden="true">
+      <div class="faq-answer" id="faq4" role="region" aria-labelledby="faq4-button" aria-hidden="true">
         <p>All affiliate commissions are <strong>fully transferred to Luigi’s official fund on GiveSendGo</strong>. No money is kept by the shop owner. <a href="https://www.canva.com/design/DAGtctiIWKY/_zv07c47AvQoaDEcbQkriQ/view?utm_content=DAGtctiIWKY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb1237ef60d" target="_blank" rel="noopener noreferrer">See our reports</a>.</p>
       </div>
-    </div>
+    </section>
 
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
+    <section class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq5" id="faq5-button">
         Why Isn’t Luigi Involved in This Shop?
-        <span class="icon">+</span>
+        <span class="icon" aria-hidden="true"></span>
       </button>
-      <div class="faq-answer" aria-hidden="true">
+      <div class="faq-answer" id="faq5" role="region" aria-labelledby="faq5-button" aria-hidden="true">
         <p>Because of prison rules, Luigi <strong>cannot legally operate or directly benefit</strong> from any business venture.</p>
         <p>If you disagree with that, contact your representatives and support efforts to <a href="https://abolishdpandhelpluigimangione.github.io/" target="_blank" rel="noopener noreferrer">end the death penalty</a>.</p>
       </div>
-    </div>
+    </section>
 
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
+    <section class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq6" id="faq6-button">
         Refunds, Orders &amp; Customer Service
-        <span class="icon">+</span>
+        <span class="icon" aria-hidden="true"></span>
       </button>
-      <div class="faq-answer" aria-hidden="true">
+      <div class="faq-answer" id="faq6" role="region" aria-labelledby="faq6-button" aria-hidden="true">
         <p>We don’t handle orders directly. For issues with purchases, <a href="https://support.bookshop.org/en/support/solutions/articles/65000035202-how-do-i-return-my-order-or-report-a-problem" target="_blank" rel="noopener noreferrer">contact Bookshop.org support</a>.</p>
         <p>For questions about this shop or Luigi’s fund, visit our <a href="https://linktr.ee/luigislegalfundbookshop" target="_blank" rel="noopener noreferrer">Linktree</a> and scroll to the bottom to use the <strong>Contact Us form</strong>.</p>
       </div>
-    </div>
-
-  </div>
+    </section>
+  </main>
 
 <script>
   const faqButtons = document.querySelectorAll('.faq-question');
 
   faqButtons.forEach(button => {
     button.addEventListener('click', () => {
-      const answer = button.nextElementSibling;
+      const answer = document.getElementById(button.getAttribute('aria-controls'));
       const isOpen = answer.classList.contains('open');
 
       // Close all open answers
       document.querySelectorAll('.faq-answer.open').forEach(openAnswer => {
         openAnswer.classList.remove('open');
         openAnswer.style.maxHeight = null;
-        openAnswer.previousElementSibling.setAttribute('aria-expanded', 'false');
-        openAnswer.previousElementSibling.classList.remove('active');
+        const btn = document.querySelector(`button[aria-controls="${openAnswer.id}"]`);
+        btn.setAttribute('aria-expanded', 'false');
+        btn.classList.remove('active');
         openAnswer.setAttribute('aria-hidden', 'true');
       });
 
